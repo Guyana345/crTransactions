@@ -24,7 +24,7 @@ app.use(function (req, res, next) {
 
 const mongoose = require('mongoose')
 // add mongodb url
-// mongoose.connect('')
+mongoose.connect('mongodb://localhost:27017/globalmantics')
 const db = mongoose.connection
 
 db.on('error', console.error.bind(console, 'connection error:'))
